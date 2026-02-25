@@ -23,6 +23,7 @@ from .reflection import (
 )
 from .injection import format_memory_block, build_system_prompt_with_memory
 from .capture import capture_event, capture_user_message, should_capture
+from .openclaw import TotalReclawPlugin
 
 __version__ = VERSION
 
@@ -32,4 +33,5 @@ __all__ = [
     "build_reflection_prompt", "parse_reflection", "store_reflection", "fallback_store_summary",
     "format_memory_block", "build_system_prompt_with_memory",
     "capture_event", "capture_user_message", "should_capture",
+    "TotalReclawPlugin",
 ]
