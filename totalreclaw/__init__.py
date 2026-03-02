@@ -23,7 +23,10 @@ from .reflection import (
 )
 from .injection import format_memory_block, build_system_prompt_with_memory
 from .capture import capture_event, capture_user_message, should_capture
-from .openclaw import TotalReclawPlugin
+try:
+    from .openclaw import TotalReclawPlugin
+except ImportError:
+    TotalReclawPlugin = None
 
 __version__ = VERSION
 

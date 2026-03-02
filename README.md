@@ -49,11 +49,34 @@ Session 3: Agent loads ALL prior context. Finishes the job.
 
 ## Quick Start
 
+### Quick Start (Open Source)
+
+```bash
+pip install ./totalreclaw
+```
+
+```python
+from totalreclaw import MemoryStore, retrieve_memories, format_memory_block
+
+# Create a memory store for your agent
+store = MemoryStore(agent_id="my-agent")
+
+# Save memories as your agent works
+store.save_episode("Created Stripe customer cus_123", goal_tag="payments")
+store.save_directive("Always confirm before making paid API calls")
+store.save_reflection("Set up payments. Customer created. Webhook failed.", goal_tag="payments")
+
+# Next session — retrieve and inject memories
+memories = retrieve_memories(store, current_goal="payments")
+context = format_memory_block(memories)
+# Inject 'context' into your agent's system prompt
+```
+
+### Quick Start (Pro — 3-line integration)
+
 ```bash
 # After purchasing from Gumroad, unzip and install:
 pip install ./totalreclaw
-
-# Or copy the totalreclaw/ directory directly into your project
 ```
 
 ```python
@@ -86,6 +109,29 @@ Run the included demo to see it in action:
 ```
 python -m totalreclaw.examples.multi_session_demo
 ```
+
+---
+
+## Free vs Pro
+
+TotalReclaw's core engine is open source. The production-ready plugin is available on Gumroad.
+
+| | Open Source (GitHub) | Pro (Gumroad) |
+|---|---|---|
+| MemoryStore (SQLite-backed storage) | ✓ | ✓ |
+| 4-layer retrieval algorithm | ✓ | ✓ |
+| Context injection formatting | ✓ | ✓ |
+| Smart capture filtering | ✓ | ✓ |
+| Basic reflection prompt | ✓ | ✓ |
+| Basic agent example | ✓ | ✓ |
+| **TotalReclawPlugin (2-3 line integration)** | | ✓ |
+| **Full reflection engine with fallback handling** | | ✓ |
+| **Multi-session demo** | | ✓ |
+| **113-test production suite** | | ✓ |
+| **Priority support** | | Builder+ |
+| **Private community + architecture blueprints** | | Pro |
+
+→ **Get TotalReclaw Pro: [GUMROAD_LINK]**
 
 ---
 
@@ -290,7 +336,7 @@ Python 3.10 or higher. No external dependencies — TotalReclaw uses only the st
 
 ## License
 
-Commercial software. See LICENSE for terms.
+MIT License. See LICENSE for terms.
 
 ---
 
