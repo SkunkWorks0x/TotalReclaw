@@ -131,7 +131,7 @@ TotalReclaw's core engine is open source. The production-ready plugin is availab
 | **Priority support** | | Builder+ |
 | **Private community + architecture blueprints** | | Pro |
 
-→ **Get TotalReclaw Pro: [GUMROAD_LINK]**
+→ **Get TotalReclaw Pro: https://skunkworks0x.gumroad.com/l/totalreclaw-core**
 
 ---
 

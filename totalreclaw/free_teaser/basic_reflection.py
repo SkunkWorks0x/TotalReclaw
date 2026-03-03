@@ -11,7 +11,7 @@ WHAT THIS DOESN'T DO (that the full TotalReclaw does):
 - No capture filtering
 - No multi-session continuity
 
-Get the full system: https://[YOUR_GUMROAD_LINK]
+Get the full system: https://skunkworks0x.gumroad.com/l/totalreclaw-core
 """
 
 REFLECTION_PROMPT = """You are a session reflection engine for an AI agent. Your job is to analyze a completed work session and extract structured knowledge.
@@ -49,4 +49,4 @@ if __name__ == "__main__":
     print(f"System prompt: {len(messages[0]['content'])} chars")
     print(f"User message: {len(messages[1]['content'])} chars")
     print("\nWant automatic storage, retrieval, and multi-session continuity?")
-    print("Get TotalReclaw: https://[YOUR_GUMROAD_LINK]")
+    print("Get TotalReclaw: https://skunkworks0x.gumroad.com/l/totalreclaw-core")
